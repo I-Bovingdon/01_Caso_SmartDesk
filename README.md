@@ -8,7 +8,7 @@ La dirección comercial necesita un análisis detallado del desempeño de la cue
 
 [SQL QUERY: RENDIMIENTO DE LA CUENTA DEL CLIENTE ADABS ENTERTAINMENT EN EL AÑO 2020](sql/Query01.sql)
 
-
+![img](images/image01.png)
 
 CONCLUSIONES:
 De la relación entre el ingreso total (TOTAL_VENTAS) y el beneficio (BENEFICIO_TOTAL) de las ventas de sillas y electrónica a dicho cliente, se aprecia que tienen un rendimiento del 33% y 36% respectivamente, relativamente similar a pesar de tratarse de elementos tan diferentes. Habría que comparar estos rendimientos con los de otros clientes para evaluar si son habituales y/o aceptables.
@@ -20,7 +20,9 @@ Enunciado:
 El departamento de expansión internacional requiere comparar el rendimiento promedio de ventas entre los diferentes países de las regiones APAC y EMEA. Este análisis permitirá identificar mercados con mayor potencial y establecer benchmarks regionales para la toma de decisiones estratégicas.
 
 [SQL QUERY: COMPARACION DE RENDIMIENTO POR PAIS EN LAS REGIONES DE APAC Y EMEA](sql/Query02.sq2)
+![img](images/image02.png)
 
+![img](images/image02g.png)
 
 CONCLUSIONES:
 Se puede observar que en general los países de la región APAC tienen un ingreso y beneficio considerablemente mayor, destacando Australia y Singapore.
@@ -29,7 +31,7 @@ REFLEXIONES ADICIONALES:
 A pesar de ser menos países en la región APAC el beneficio total de ambas regiones ronda los 3390000.00, como se puede observar en el resultado de la siguiente consulta:
 
 [SQL QUERY: CONSULTA PARA LA SUMA LOS BENEFICIOS PROMEDIO DE LAS DOS REGIONES, EMEA Y APAC](sql/Query02b.sql)
-
+![img](images/image02b.png)
  
 COMPROBACIÓN ADICIONAL:
 De una consulta exploratoria previa sabemos que en la tabla ACCOUNTS figuran registros de 9 países para la región EMEA, pero en la consulta anterior sólo aparecen 8, el que no aparece es United Kingdom (UK). Comprobamos que efectivamente no hay registros de ventas en la tabla SALES para los 4 clientes registrados de UK:
@@ -44,8 +46,9 @@ Enunciado:
 El equipo de ventas estratégicas necesita identificar qué industrias generan mayor beneficio entre las cuentas que se encuentran en etapa Commit (acuerdos cercanos al cierre) y que tienen un pronóstico superior a $500,000. Los resultados deben clasificarse como "Alto" si el beneficio total de la industria supera el $1,000,000, o "Normal" en caso contrario.
 
 [SQL QUERY: ESTUDIO DE INDUSTRIAS GENERAN MAYOR BENEFICIO EN ETAPA DE COMPROMISO "COMMIT"](sql/Query03.sql)
+![img](images/image03.png)
 
-
+![img](images/image03g.png)
  
 CONCLUSIONES:
 El sector financiero no está alcanzando el pronóstico superior a 500k. 
@@ -57,7 +60,9 @@ Enunciado:
 La dirección financiera requiere un análisis consolidado por categoría de producto que compare los beneficios reales totales obtenidos en 2021 con los pronósticos totales para 2022. Adicionalmente, se debe identificar la antigüedad de las oportunidades de venta (más reciente y más antigua) dentro de cada categoría para evaluar la velocidad del ciclo de ventas.Calcula el beneficio de 2021 junto con el pronóstico de beneficio para el año 2022, agrupando los resultados por categoría de producto. Además, queremos identificar la oportunidad más antigua y la más reciente dentro de cada categoría.
 
 [SQL QUERY: EVOLUCION DEL PRONOSTICO Y BENEFICIO REAL: ESTUDIO DE TRAYECTORIA POR CATEGORIA](sql/Query04.sql)
+![img](images/image04.png)
 
+![img](images/image04g.png)
  
 CONCLUSIONES:
 En las 4 categorías se aprecia que el mínimo de días que ha estado abierta una oportunidad de venta es de apenas 2-3 días, sin embargo puede apreciarse que en 3 de ellas las oportunidades más antiguas superan el año (más de 365 días abierta), de seguir "abiertas" sería conveniente examinar el motivo, y en qué estado realmente se encuentran (tratar de cerrar la venta o darla por no realizada finalmente) a fin de esclarecer el estado real y valorar la situación del stock y medios (repuestos, servicio técnico, o mantenimiento) a disponer en función de la demanda real. 
@@ -76,8 +81,10 @@ Se busca identificar las regiones e industrias mejor y peor posicionadas para re
 Para resumir la situación general en las 4 regiones extraemos el beneficio total, mínimo, máximo, promedio, su desviación, y el promedio de los márgenes:
 
 [SQL QUERY: ANALISIS EXPLORATORIO](sql/Query05.sql)
+![img](images/image05.png)
 
- 
+![img](images/image05g.png)
+
 De lo que extremos que la que las regiones que generan mayor beneficio son NAM y EMEA, y la que menos por mucho LATAM, sin embargo, los márgenes promedio no difieren tanto entre estás regiones. Dicha diferencia puede deberse a varios factores, desde la diferencia de territorio o población hasta la falta de mercado en la región (posible predominio de zonas rurales, etc.).
 
 
@@ -87,15 +94,10 @@ Con la siguiente consulta, podemos identificar cuales son las industrias con may
 -	Margen < 33%			        -> 	Bajo
 
 [SQL QUERY: ORDENADO POR MARGEN EN CADA REGION](sql/Query05b.sql)
+![img](images/image05b.png)
 
-Ordenado por margen en cada región:
- 
+![img](images/image05bg.png)
 
-Si ordenamos por beneficio puro independientemente de la industria o región vemos en cabeza:
- 
-
-Por el contrario, en lo más bajo del beneficio puro:
- 
  
   4.	RESPUESTAS A LA PREGUNTA DE NEGOCIO
 
@@ -109,12 +111,16 @@ Por ejemplo, una región con industrias de márgenes altos, aunque tenga menos v
 
   5.	REFLEXIÓN Y SUGERENCIA DE ESTRATEGIA
 
-1.	Reforzar las industrias de margen alto en regiones emergentes (LATAM y APAC):
+a)	Reforzar las industrias de margen alto en regiones emergentes (LATAM y APAC):
 Replicar el modelo operativo de sectores rentables (como Tecnología o Servicios Financieros) en regiones de menor volumen puede acelerar la rentabilidad global.
-2.	Optimizar sectores de margen medio-bajo:
+
+b)	Optimizar sectores de margen medio-bajo:
 Analizar los costos y políticas de precios en industrias con márgenes <33% para elevar su eficiencia y contribuir al beneficio total.
-3.	Priorización de inversión regional:
+
+c)	Priorización de inversión regional:
 Concentrar los esfuerzos comerciales y presupuestarios en NAM y EMEA para sostener su crecimiento, mientras se diseñan estrategias de expansión escalonada en LATAM.
-4.	Seguimiento con dashboards dinámicos:
+
+d)	Seguimiento con dashboards dinámicos:
 Mantener el monitoreo del beneficio total, margen promedio y su desviación por región e industria, utilizando vistas como BENEF_MARGE_REG para detectar rápidamente desviaciones o nuevas oportunidades.
+
 
