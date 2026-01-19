@@ -1,5 +1,5 @@
-# 01_Caso_SmartDesk
-Caso práctico de análisis de bases de datos SQL 
+# 01_Caso_SmartDesk  
+Caso práctico de análisis de bases de datos SQL   
 
 
 # 1. Análisis de Ventas y Beneficio por Categoría de Producto
