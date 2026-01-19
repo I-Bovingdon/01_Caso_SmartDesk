@@ -3,7 +3,7 @@ Caso práctico de análisis de bases de datos SQL
 
 
 # 1. Análisis de Ventas y Beneficio por Categoría de Producto
-Enunciado:
+
 La dirección comercial necesita un análisis detallado del desempeño de la cuenta Adabs Entertainment durante el año 2020. Se requiere un desglose completo por categoría de producto que incluya todas las líneas de ingreso (mantenimiento, producto, partes y soporte), las unidades vendidas y el beneficio generado.
 
 [SQL QUERY: RENDIMIENTO DE LA CUENTA DEL CLIENTE ADABS ENTERTAINMENT EN EL AÑO 2020](sql/Query01.sql)
@@ -15,7 +15,6 @@ De la relación entre el ingreso total (TOTAL_VENTAS) y el beneficio (BENEFICIO_
  
 
 # 2. Comparación de Rendimiento por País en Regiones APAC y EMEA
-Enunciado:
 
 El departamento de expansión internacional requiere comparar el rendimiento promedio de ventas entre los diferentes países de las regiones APAC y EMEA. Este análisis permitirá identificar mercados con mayor potencial y establecer benchmarks regionales para la toma de decisiones estratégicas.
 
@@ -34,15 +33,11 @@ A pesar de ser menos países en la región APAC el beneficio total de ambas regi
 ![img](images/image02b.png)
  
 COMPROBACIÓN ADICIONAL:
-De una consulta exploratoria previa sabemos que en la tabla ACCOUNTS figuran registros de 9 países para la región EMEA, pero en la consulta anterior sólo aparecen 8, el que no aparece es United Kingdom (UK). Comprobamos que efectivamente no hay registros de ventas en la tabla SALES para los 4 clientes registrados de UK:
-
-
-
+De una consulta exploratoria previa sabemos que en la tabla ACCOUNTS figuran registros de 9 países para la región EMEA, pero en la consulta anterior sólo aparecen 8, el que no aparece es United Kingdom (UK). Comprobamos que efectivamente no hay registros de ventas en la tabla SALES para los 4 clientes registrados de UK.
 
   
 # 3. Análisis del Beneficio Total por Industria: Estudio de Clientes en Etapa de Compromiso
 
-Enunciado:
 El equipo de ventas estratégicas necesita identificar qué industrias generan mayor beneficio entre las cuentas que se encuentran en etapa Commit (acuerdos cercanos al cierre) y que tienen un pronóstico superior a $500,000. Los resultados deben clasificarse como "Alto" si el beneficio total de la industria supera el $1,000,000, o "Normal" en caso contrario.
 
 [SQL QUERY: ESTUDIO DE INDUSTRIAS GENERAN MAYOR BENEFICIO EN ETAPA DE COMPROMISO "COMMIT"](sql/Query03.sql)
@@ -56,7 +51,6 @@ El sector financiero no está alcanzando el pronóstico superior a 500k. 
 
 # 4. Evolución del Pronóstico y Beneficio Real: Análisis de la Trayectoria por Categoría.
 
-Enunciado:
 La dirección financiera requiere un análisis consolidado por categoría de producto que compare los beneficios reales totales obtenidos en 2021 con los pronósticos totales para 2022. Adicionalmente, se debe identificar la antigüedad de las oportunidades de venta (más reciente y más antigua) dentro de cada categoría para evaluar la velocidad del ciclo de ventas.Calcula el beneficio de 2021 junto con el pronóstico de beneficio para el año 2022, agrupando los resultados por categoría de producto. Además, queremos identificar la oportunidad más antigua y la más reciente dentro de cada categoría.
 
 [SQL QUERY: EVOLUCION DEL PRONOSTICO Y BENEFICIO REAL: ESTUDIO DE TRAYECTORIA POR CATEGORIA](sql/Query04.sql)
